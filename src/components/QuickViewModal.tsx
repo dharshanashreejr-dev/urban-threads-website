@@ -113,8 +113,9 @@ export default function QuickViewModal({ product, onClose, onNavigateToCart }: Q
   const isFavorited = isInWishlist(product.id);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/85 backdrop-blur-md overflow-y-auto">
-      <div className="bg-panel border border-hairline/10 rounded-3xl p-6 sm:p-8 max-w-4xl w-full relative shadow-2xl animate-in fade-in zoom-in-95 duration-200 my-8">
+    
+      <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 bg-ink/85 backdrop-blur-md overflow-y-auto">
+      <div className="bg-panel border border-hairline/10 rounded-3xl p-6 sm:p-8 max-w-4xl w-full relative shadow-2xl animate-in fade-in zoom-in-95 duration-200 my-4 sm:my-8">
         <button
           onClick={onClose}
           className="absolute top-6 right-6 text-boneDim hover:text-bone z-10"
