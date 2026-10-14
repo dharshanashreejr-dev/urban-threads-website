@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Theme tokens — Obsidian + Deep Burgundy + Ivory + Silver ---- */
+/* Dark is the default/original mode. .light overrides it. */
+:root,
+:root.dark {
+  --c-ink: 9 9 10;
+  --c-charcoal: 18 17 19;
+  --c-panel: 24 22 25;
+  --c-gold: 123 28 48;
+  --c-goldDeep: 90 18 32;
+  --c-rust: 176 180 186;
+  --c-bone: 244 242 236;
+  --c-boneDim: 176 174 170;
+  --c-hairline: 255 255 255;
+}
+
+:root.light {
+  --c-ink: 250 248 244;
+  --c-charcoal: 240 236 230;
+  --c-panel: 255 255 255;
+  --c-gold: 90 18 32;
+  --c-goldDeep: 64 12 22;
+  --c-rust: 90 95 102;
+  --c-bone: 20 18 20;
+  --c-boneDim: 95 92 96;
+  --c-hairline: 20 18 15;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background: rgb(var(--c-ink));
+  color: rgb(var(--c-bone));
+  scroll-behavior: smooth;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.005em;
+}
+
+/* ---- Luxury e-commerce system ---- */
+.lux-eyebrow {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.35em;
+}
+
+.lux-btn-primary {
+  background: linear-gradient(135deg, rgb(var(--c-gold)), rgb(var(--c-goldDeep)));
+  color: #f5f1ea;
+  box-shadow: 0 10px 30px -8px rgba(123, 28, 48, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+.lux-btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+  box-shadow: 0 16px 40px -10px rgba(123, 28, 48, 0.7);
+}
+
+.lux-btn-outline {
+  border: 1.5px solid rgb(var(--c-gold));
+  color: rgb(var(--c-bone));
+  backdrop-filter: blur(6px);
+  background: rgba(var(--c-panel), 0.55);
+  transition: all 0.25s ease;
+}
+:root.light .lux-btn-outline {
+  border-color: rgb(var(--c-gold));
+  color: rgb(var(--c-gold));
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(90, 18, 32, 0.12);
+}
+.lux-btn-outline:hover {
+  border-color: rgb(var(--c-goldDeep));
+  color: rgb(var(--c-goldDeep));
+  background: rgba(176, 180, 186, 0.12);
+}
+
+.lux-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+  border: 1px solid rgba(123, 28, 48, 0.18);
+  box-shadow: 0 12px 40px -12px rgba(0,0,0,0.55);
+}
+
+.lux-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(123,28,48,0.6), transparent);
+}
+
+/* Hero — split layout: portrait image on one side, copy on the other.
+   No text sits over the image; the image stays fully visible. */
+.lux-hero {
+  position: relative;
+  min-height: 92vh;
+  overflow: hidden;
+  background: rgb(var(--c-ink));
+}
+@media (max-width: 1023px) {
+  .lux-hero {
+    min-height: auto;
+  }
+}
+.lux-hero-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+}
+.lux-hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  animation: luxKenBurns 26s ease-in-out infinite alternate;
+  filter: saturate(1.05) contrast(1.03);
+}
+@keyframes luxKenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -0.5%); }
+}
+.lux-hero-frame-glow {
+  position: absolute;
+  inset: -18%;
+  background: radial-gradient(55% 45% at 30% 25%, rgba(176,180,186,0.22), transparent 70%);
+  mix-blend-mode: screen;
+  animation: luxGlowPulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes luxGlowPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.lux-hero-content {
+  position: relative;
+  z-index: 10;
+}
+.lux-fade-up {
+  animation: luxFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes luxFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lux-scroll-cue {
+  animation: luxBounce 2.2s ease-in-out infinite;
+}
+@keyframes luxBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--c-ink));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--c-goldDeep));
+  border-radius: 4px;
+}
+
+.gold-underline {
+  position: relative;
+}
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 40px;
+  background: rgb(var(--c-gold));
+}
+
+/* Hero copy sits beside the image now, on the page background, so it
+   simply follows the page text colour rather than needing a scrim. */
+.hero-copy {
+  color: rgb(var(--c-bone));
+}
+:root.light .hero-copy {
+  font-weight: 700;
+}
+.hero-heading-light {
+  color: rgb(var(--c-bone));
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+:root.light .hero-pill {
+  background: rgba(90, 18, 32, 0.08);
+}
+.hero-copy-decrypted {
+  color: rgb(var(--c-bone));
+}
+.hero-copy-decrypted-pending {
+  color: rgba(176, 174, 170, 0.4);
+}
+:root.light .hero-copy-decrypted-pending {
+  color: rgba(95, 92, 96, 0.4);
+}
+
+/* GlassFlow background blobs — obsidian/burgundy/silver jewel palette */
+.glass-blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.55;
+  animation: glassFlowMove 16s ease-in-out infinite;
+}
+:root.light .glass-blob {
+  opacity: 0.18;
+}
+.glass-blob-a {
+  width: 420px;
+  height: 420px;
+  top: -10%;
+  left: -8%;
+  background: radial-gradient(circle at 30% 30%, #7B1C30, transparent 70%);
+  animation-delay: 0s;
+}
+.glass-blob-b {
+  width: 380px;
+  height: 380px;
+  bottom: -12%;
+  right: -6%;
+  background: radial-gradient(circle at 60% 40%, #B0B4BA, transparent 70%);
+  animation-delay: -5s;
+}
+.glass-blob-c {
+  width: 300px;
+  height: 300px;
+  top: 30%;
+  left: 45%;
+  background: radial-gradient(circle at 50% 50%, #4A0F1D, transparent 70%);
+  animation-delay: -10s;
+}
+@keyframes glassFlowMove {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(6%, 4%) scale(1.08); }
+  66% { transform: translate(-5%, 6%) scale(0.94); }
+}
+
+/* Review / order screenshot cards */
+.review-card {
+  scroll-snap-align: start;
+}
+.review-scroll {
+  scroll-snap-type: x mandatory;
+}
+.star-btn {
+  transition: transform 0.15s ease;
+}
+.star-btn:hover {
+  transform: scale(1.15);
+}
+
+
+/* ---- Navbar / badge contrast helpers ---- */
+:root.light header {
+  background: rgba(250, 248, 244, 0.92) !important;
+  border-bottom-color: rgba(20, 18, 15, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+:root.dark header {
+  background: rgba(9, 9, 10, 0.72) !important;
+  border-bottom-color: rgba(255,255,255,0.12) !important;
+}
