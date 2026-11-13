@@ -46,17 +46,17 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative">
+        <Link to="/" className="flex items-center gap-3 group shrink-0">
+          <div className="relative shrink-0">
             <img
               src={logo}
               alt="Urban Threads logo"
-              className="w-11 h-11 rounded-full object-cover border border-gold/40 group-hover:scale-105 transition-transform"
+              className="w-14 h-14 min-w-[3.5rem] min-h-[3.5rem] shrink-0 aspect-square rounded-full object-cover border-2 border-bone/80 shadow-[0_0_14px_rgba(212,168,75,0.45)] group-hover:scale-105 transition-transform"
             />
             <span className="w-2.5 h-2.5 rounded-full bg-gold absolute bottom-0 right-0" />
           </div>
           <div className="flex flex-col">
-            <span className="font-display text-2xl sm:text-3xl tracking-widest text-bone leading-none drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)]">
+            <span className="font-display text-xl sm:text-2xl xl:text-3xl tracking-widest text-bone leading-none whitespace-nowrap drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)]">
               URBAN<span className="text-gold">THREADS</span>
             </span>
             <span className="text-[9px] uppercase tracking-[0.25em] text-bone font-semibold opacity-90 drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
@@ -66,7 +66,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-7 ml-6">
           {links.map((l) => {
             const isInternalAnchor = l.to.includes('#');
             if (isInternalAnchor) {
@@ -151,7 +151,7 @@ export default function Navbar() {
 
           {/* WhatsApp Direct */}
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/918015052453"
             target="_blank"
             rel="noreferrer"
             className="hidden md:inline-flex items-center gap-1.5 bg-gold text-onGold hover:bg-goldDeep border border-gold shadow-md shadow-gold/25 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider transition-colors"

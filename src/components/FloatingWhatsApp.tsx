@@ -15,7 +15,7 @@ export default function FloatingWhatsApp() {
 
   const handleSendPrompt = (text: string) => {
     window.open(
-      `https://wa.me/919876543210?text=${encodeURIComponent(text)}`,
+      `https://wa.me/918015052453?text=${encodeURIComponent(text)}`,
       '_blank'
     );
     setIsOpen(false);
@@ -25,7 +25,7 @@ export default function FloatingWhatsApp() {
     e.preventDefault();
     if (!customMsg.trim()) return;
     window.open(
-      `https://wa.me/919876543210?text=${encodeURIComponent(customMsg)}`,
+      `https://wa.me/918015052453?text=${encodeURIComponent(customMsg)}`,
       '_blank'
     );
     setCustomMsg('');

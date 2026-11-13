@@ -1,8 +1,8 @@
 import type { CartItem } from '../context/CartContext';
 
 // Admin's WhatsApp number in international format
-export const ADMIN_WHATSAPP_NUMBER = '919876543210';
-export const ADMIN_FALLBACK_NUMBER = '919876543210';
+export const ADMIN_WHATSAPP_NUMBER = '918015052453';
+export const ADMIN_FALLBACK_NUMBER = '918015052453';
 
 export function buildOrderWhatsAppLink(params: {
   orderId: string;
@@ -30,16 +30,16 @@ export function buildOrderWhatsAppLink(params: {
   } = params;
 
   const lines = [
-    `🛍️ *NEW ONLINE ORDER — Urban Threads*`,
+    `*NEW ONLINE ORDER — Urban Threads*`,
     `━━━━━━━━━━━━━━━━━━━━`,
-    `📌 *Order ID:* ${orderId}`,
-    `👤 *Customer Name:* ${customerName}`,
-    `📞 *Phone Number:* ${customerPhone}`,
-    `📍 *Delivery Address:* ${deliveryAddress || 'Direct Store Pickup'}`,
-    `🏙️ *City / District:* ${cityDistrict || 'Mohanur'}`,
-    `📮 *Pincode:* ${pincode || '637015'}`,
+    `*Order ID:* ${orderId}`,
+    `*Customer Name:* ${customerName}`,
+    `*Phone Number:* ${customerPhone}`,
+    `*Delivery Address:* ${deliveryAddress || 'Direct Store Pickup'}`,
+    `*City / District:* ${cityDistrict || 'Mohanur'}`,
+    `*Pincode:* ${pincode || '637015'}`,
     `━━━━━━━━━━━━━━━━━━━━`,
-    `🛒 *ORDERED ITEMS:*`,
+    `*ORDERED ITEMS:*`,
     ...items.map(
       (i, idx) =>
         `${idx + 1}. *${i.product.name}*\n   Size: ${i.size} | Qty: ${i.qty} | ₹${(
@@ -47,11 +47,11 @@ export function buildOrderWhatsAppLink(params: {
         ).toLocaleString('en-IN')}`
     ),
     `━━━━━━━━━━━━━━━━━━━━`,
-    `💵 *Subtotal:* ₹${subtotal.toLocaleString('en-IN')}`,
-    `🧾 *GST (5%):* ₹${gstAmount.toLocaleString('en-IN')}`,
-    `💰 *FINAL PAYABLE:* ₹${total.toLocaleString('en-IN')}`,
+    `*Subtotal:* ₹${subtotal.toLocaleString('en-IN')}`,
+    `*GST (5%):* ₹${gstAmount.toLocaleString('en-IN')}`,
+    `*FINAL PAYABLE:* ₹${total.toLocaleString('en-IN')}`,
     `━━━━━━━━━━━━━━━━━━━━`,
-    `⚡ *Store:* 15/8 Velur Road, Mohanur, Namakkal 637015`,
+    `*Store:* 15/8 Velur Road, Mohanur, Namakkal 637015`,
     `_Please confirm stock & courier dispatch timing._`
   ];
 

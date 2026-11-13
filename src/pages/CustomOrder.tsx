@@ -25,16 +25,16 @@ const FABRIC_OPTIONS = [
 
 function buildCustomOrderWhatsAppLink(req: CustomOrderRequest) {
   const lines = [
-    `✂️ *CUSTOM ORDER REQUEST — Urban Threads*`,
+    `*CUSTOM ORDER REQUEST — Urban Threads*`,
     `━━━━━━━━━━━━━━━━━━━━`,
-    `📌 *Request ID:* ${req.id}`,
-    `👤 *Name:* ${req.customerName}`,
-    `📞 *Phone:* ${req.customerPhone}`,
-    `👕 *Garment:* ${req.garmentType}`,
-    `🧵 *Fabric:* ${req.fabric}`,
-    `🎨 *Color:* ${req.color}`,
-    `📏 *Size:* ${req.size}`,
-    `📝 *Notes:* ${req.notes || 'None'}`,
+    `*Request ID:* ${req.id}`,
+    `*Name:* ${req.customerName}`,
+    `*Phone:* ${req.customerPhone}`,
+    `*Garment:* ${req.garmentType}`,
+    `*Fabric:* ${req.fabric}`,
+    `*Color:* ${req.color}`,
+    `*Size:* ${req.size}`,
+    `*Notes:* ${req.notes || 'None'}`,
     `━━━━━━━━━━━━━━━━━━━━`,
     `_Please confirm feasibility, price, and stitching timeline._`
   ];

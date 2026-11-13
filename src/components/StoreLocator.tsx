@@ -66,13 +66,13 @@ export default function StoreLocator() {
               {/* Contact Buttons */}
               <div className="grid grid-cols-2 gap-3 pt-2">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+918015052453"
                   className="bg-charcoal hover:bg-charcoal/80 border border-hairline/10 text-bone text-xs font-bold py-3 rounded-full flex items-center justify-center gap-1.5 transition-colors uppercase tracking-wider"
                 >
                   <Phone size={13} className="text-gold" /> Call Store
                 </a>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/918015052453"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-gold hover:bg-goldDeep text-onGold text-xs font-bold py-3 rounded-full flex items-center justify-center gap-1.5 transition-colors uppercase tracking-wider shadow-lg shadow-gold/20"

@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src={logo} alt="Urban Threads" className="w-12 h-12 rounded-full object-cover shadow" />
+                <img src={logo} alt="Urban Threads" className="w-16 h-16 min-w-[4rem] shrink-0 aspect-square rounded-full object-cover border-2 border-bone/80 shadow-[0_0_14px_rgba(212,168,75,0.35)]" />
                 <div>
                   <span className="font-display text-3xl tracking-widest text-bone">
                     URBAN<span className="text-gold">THREADS</span>
@@ -157,8 +157,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={14} className="text-gold shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-gold transition-colors">
-                  +91 98765 43210
+                <a href="tel:+918015052453" className="hover:text-gold transition-colors">
+                  +91 80150 52453
                 </a>
               </div>
               <div className="pt-2 flex items-center gap-3">
@@ -172,7 +172,7 @@ export default function Footer() {
                   <Instagram size={15} />
                 </a>
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/918015052453"
                   target="_blank"
                   rel="noreferrer"
                   className="w-8 h-8 rounded-full bg-panel border border-hairline/10 flex items-center justify-center text-slate-400 hover:bg-slate-600 hover:text-white transition-colors"

@@ -16,7 +16,7 @@ export default function AnnouncementTicker() {
     },
     {
       icon: Phone,
-      text: 'Call / WhatsApp us: +91 98765 43210 (Daily Dispatch)'
+      text: 'Call / WhatsApp us: +91 80150 52453 (Daily Dispatch)'
     }
   ];
 

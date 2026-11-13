@@ -30,7 +30,7 @@ export default function WholesaleDesk() {
   const handleWholesaleWhatsAppInquiry = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Hello Urban Threads Wholesale Desk,\n\nI would like to inquire about wholesale stock supply for my retail business.\n\n• Shop/Business Name: ${shopName || 'Retail Store'}\n• Location: ${city || 'Tamil Nadu'}\n• Contact Phone: ${phone || 'N/A'}\n• Category Interest: ${categoryInterest}\n• Estimated Initial MOQ: ${quantityPcs} Pieces\n\nPlease share your latest wholesale catalogue & price list.`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/918015052453?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   return (
